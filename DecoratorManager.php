@@ -26,7 +26,7 @@ class DecoratorManager extends DataProvider
     $this->cache = $cache;
   }
 
-  // phpDoc
+  // или избавиться от метода, вынести задане логгера в конструктор
   public function setLogger(LoggerInterface $logger)
   {
     $this->logger = $logger;
@@ -56,7 +56,7 @@ class DecoratorManager extends DataProvider
 
       return $result;
     } catch (Exception $e) {
-      $this->logger->critical('Error'); //а если $this->logger не задан? добавить проверку
+      $this->logger->critical('Error'); //а если $this->logger не задан? Сообщение не информативно.
     }
 
     return [];
