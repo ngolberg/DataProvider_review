@@ -8,6 +8,7 @@ use Psr\Cache\CacheItemPoolInterface;
 use Psr\Log\LoggerInterface;
 use src\Integration\DataProvider;
 
+// phpDoc
 class DecoratorManager extends DataProvider
 {
   public $cache; // должно быть private
@@ -25,6 +26,7 @@ class DecoratorManager extends DataProvider
     $this->cache = $cache;
   }
 
+  // phpDoc
   public function setLogger(LoggerInterface $logger)
   {
     $this->logger = $logger;
